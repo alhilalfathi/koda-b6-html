@@ -198,6 +198,11 @@ header {
     width: 100%;
     margin-top: 40px;
 }
+.section4 {
+    background-color: #0B0909;
+    color: white;
+    padding: 80px;
+}
 .section4-kiri {
     width: 40%;
     float: left;
