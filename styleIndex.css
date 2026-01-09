@@ -1,96 +1,105 @@
 * {
     margin: 0;
-    font-family: "Plus Jakarta Sans","sans-serif";
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+header {
+    background: linear-gradient(90deg, #1f1f1f 50%, #f4f4f4 50%);
+    position: relative;
+    width: 100%;
+    height: 100vh;
 }
 .navbar {
     background-color: rgba(0, 0, 0, 0.5);
-    /* border-bottom: 1px solid; */
     color: white;
-    display: inline-block;
     width: 100%;
-    height: 76px;
-    position: absolute;
+    position: fixed;
     top: 0;
+    padding: 24px 80px;
 }
 .nav-img {
-    /* display: inline-block; */
-    /* width: 175; */
-    margin-left: 50px;
-    margin-right: 20px;
-    padding-right: 0;
-    margin-top: 22px;
-    float: left;
+    display: inline-block;
+    vertical-align: middle;
 }
 .navigasi {
-    padding: 10px;
-    display: inline-block;
-    margin-top: -15px;
+    float: left;
 }
 .navigasi-kanan {
-    margin-right: 50px;
-    margin-top: 22px;
-    float: right;
-    /* width: 288px; */
+   float: right;
     
 }
 .navigasi-kanan-img {
-    width: 18px;
-    margin-right: 18px;
+    width: 22px;
+    margin-right: 16px;
     vertical-align: middle;
 }
 
 .navigasi ul {
-    /* display: inline-block; */
-    margin-left: 20px;
-    padding-left: 0;
-    margin-top: 22px;
-    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 40px;
     
 }
-.navigasi ul li{
+.navigasi li{
     display: inline-block;
-    padding: 10px;
+    margin-right: 30px;
+    color: #fff;
+    font-weight: 500;
 }
 .tombol-signin {
     margin-right: 20px;
     border: 1px solid;
     padding: 8px 18px;
-    width: 82px;
-    height: 48px;
+    /* width: 82px; */
+    /* height: 48px; */
     color: white;
     border-radius: 6px;
     text-decoration: none;
+    font-weight: 500;
 }
 .tombol-signup {
     background: #FF8906;
-    width: 92px;
-    height: 48px;
     padding: 8px 18px;
     border-radius: 6px;
     text-decoration: none;
     color: #0B132A;
+    font-weight: 600;
 }
 .header-banner {
-    /* background-image: linear-gradient(to top,#0B0909,#777C82); */
     color: white;
     width: 50%;
     height: 1024px;
-    display: inline-block;
-    margin-right: 0;
-    background-color: #0B0909;
+    padding: 80px;
+    float: left;
+    background: #0B0909;
 
 }
 .tagline {
-    width: 45%;
-    margin: 80px;
-    display: inline-block;
-    margin-top: 200px;
-    margin-bottom: 40px;
+    display: inline-block; 
+}
+.tagline h1 {
+    color: white;
+    font-size: 42px;
+    line-height: 1.2;
+}
+.tagline p {
+    color: #d0d0d0;
+    margin-top: 20px;
+    line-height: 1.6;
 }
 .main-img {
-    /* display: inline-block; */
     width: 50%;
     float: right;
+}
+.main-img img {
+     width: 100%;
+    height: 1024px;
+    display: block;
+    margin: 0 auto;
+}
+.header-button-div {
+    margin-top: 30px;
 }
 .header-button-div a {
     background: #FF8906;
@@ -98,9 +107,149 @@
     border-radius: 6px;
     text-decoration: none;
     color: #0B132A;
-    margin-left: 80px;
-}
-.tagline-img {
-    margin-left: 82px;
+    font-weight: 600;
+    display: inline-block;
     margin-top: 30px;
+}
+ section {
+    padding: 80px;
+    overflow: hidden;
+}
+.section1-kiri {
+    width: 50%;
+    float: left;
+}
+.section1-kiri h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.section1-kiri p {
+    color: #4F5665;
+}
+.section1-list div {
+    margin-top: 16px;
+}
+.section1-list p {
+    display: inline-block;
+    margin-left: 10px;
+}
+.section1-img {
+    width: 50%;
+    float: right;
+    text-align: center;
+}
+.section1-img img {
+    width: 80%;
+}
+.section2-tagline {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.section2-tagline h1 {
+    font-size: 32px;
+}
+.section2-tagline p {
+    margin-top: 10px;
+    color: #4F5665;
+}
+.menu-list-div {
+    text-align: center;
+}
+.menu-list {
+    width: 22%;
+    display: inline-block;
+    margin: 1%;
+    border-radius: 12px;
+    padding: 20px;
+    vertical-align: top;
+}
+.menu-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+.menu-price h3 {
+    margin-top: 12px;
+}
+.menu-price p {
+    font-size: 14px;
+    color: #4F5665;
+    margin: 10px 0;
+}
+.menu-price a {
+    background-color: #ff8c00;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 10px;
+}
+.section3-tagline-div {
+    text-align: center;
+}
+.section3-tagline h1 {
+    font-size: 32px;
+}
+.section3-tagline p {
+    color: #4F5665;
+    margin-top: 10px;
+}
+
+.section3-img img {
+    width: 100%;
+    margin-top: 40px;
+}
+.section4-kiri {
+    width: 40%;
+    float: left;
+}
+.section4-kiri img {
+    width: 100%;
+    border-radius: 12px;
+}
+.section4-kanan {
+    width: 55%;
+    float: right;
+    padding-left: 40px;
+}
+.section4-kanan h2 {
+    margin: 10px 0;
+}
+.manager {
+    color: #999;
+    font-size: 14px;
+}
+footer {
+    background-color: #f8f8f8;
+    padding: 60px 80px;
+    overflow: hidden;
+}
+
+.footer1 {
+    width: 30%;
+    float: left;
+}
+
+.footer1 p {
+    margin-top: 16px;
+    color: #666;
+}
+
+.footer2,
+.footer3 {
+    width: 20%;
+    float: left;
+}
+
+.footer4 {
+    width: 20%;
+    float: right;
+}
+
+footer li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.li-bold {
+    font-weight: 700;
 }
