@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    font-family: "Plus Jakarta Sans","sans-serif";
+}
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* border-bottom: 1px solid; */
+    color: white;
+    display: inline-block;
+    width: 100%;
+    height: 76px;
+    position: absolute;
+    top: 0;
+}
+.nav-img {
+    /* display: inline-block; */
+    /* width: 175; */
+    margin-left: 50px;
+    margin-right: 20px;
+    padding-right: 0;
+    margin-top: 22px;
+    float: left;
+}
+.navigasi {
+    padding: 10px;
+    display: inline-block;
+    margin-top: -15px;
+}
+.navigasi-kanan {
+    margin-right: 50px;
+    margin-top: 22px;
+    float: right;
+    /* width: 288px; */
+    
+}
+.navigasi-kanan-img {
+    width: 18px;
+    margin-right: 18px;
+    vertical-align: middle;
+}
+
+.navigasi ul {
+    /* display: inline-block; */
+    margin-left: 20px;
+    padding-left: 0;
+    margin-top: 22px;
+    float: left;
+    
+}
+.navigasi ul li{
+    display: inline-block;
+    padding: 10px;
+}
+.tombol-signin {
+    margin-right: 20px;
+    border: 1px solid;
+    padding: 8px 18px;
+    width: 82px;
+    height: 48px;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.tombol-signup {
+    background: #FF8906;
+    width: 92px;
+    height: 48px;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #0B132A;
+}
+.header-banner {
+    /* background-image: linear-gradient(to top,#0B0909,#777C82); */
+    color: white;
+    width: 50%;
+    height: 1024px;
+    display: inline-block;
+    margin-right: 0;
+    background-color: #0B0909;
+
+}
+.tagline {
+    width: 45%;
+    margin: 80px;
+    display: inline-block;
+    margin-top: 200px;
+    margin-bottom: 40px;
+}
+.main-img {
+    /* display: inline-block; */
+    width: 50%;
+    float: right;
+}
+.header-button-div a {
+    background: #FF8906;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #0B132A;
+    margin-left: 80px;
+}
+.tagline-img {
+    margin-left: 82px;
+    margin-top: 30px;
+}
