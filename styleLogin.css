@@ -10,7 +10,6 @@ body {
 .container {
     width: 100%;
     height: 100vh;
-    overflow: hidden;
 }
 .left-image {
     width: 50%;
@@ -29,13 +28,7 @@ body {
     padding: 80px;
 }
 .logo img {
-    width: 28px;
-    vertical-align: middle;
-}
-.logo span {
-    margin-left: 8px;
-    font-weight: 600;
-    color: #7b4a2d;
+    margin-bottom: 40px;
 }
 h2 {
     margin-top: 40px;
