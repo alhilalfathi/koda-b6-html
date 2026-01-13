@@ -44,6 +44,23 @@ header {
     color: #fff;
     font-weight: 500;
 }
+.tombol-signin {
+    margin-right: 20px;
+    border: 1px solid;
+    padding: 8px 18px;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+}
+.tombol-signup {
+    background: #FF8906;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #0B132A;
+    font-weight: 600;
+}
 .title {
     padding: 30px;
 }
@@ -166,24 +183,6 @@ header {
     display: flex;
     padding-bottom: 10px;
     justify-content: space-between;
-}
-
-.tombol-signin {
-    margin-right: 20px;
-    border: 1px solid;
-    padding: 8px 18px;
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 500;
-}
-.tombol-signup {
-    background: #FF8906;
-    padding: 8px 18px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #0B132A;
-    font-weight: 600;
 }
 
 .input-group { 
