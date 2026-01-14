@@ -161,19 +161,28 @@ header {
     color: #4F5665;
 }
 .menu-list-div {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .menu-list {
-    width: 22%;
-    display: inline-block;
-    margin: 1%;
-    border-radius: 12px;
-    padding: 20px;
-    vertical-align: top;
+    padding: 15px;
+    position: relative;
+    height: 60vh;
 }
 .menu-image img {
     width: 100%;
     border-radius: 10px;
+}
+.menu-price {
+    position: absolute;
+    top: 230px;
+    left: 50px;
+    width: 70%;
+    background-color: white;
+    text-align: center;
+    padding: 5px;
 }
 .menu-price h3 {
     margin-top: 12px;
@@ -194,7 +203,11 @@ header {
     width: 130px;
 }
 .menu-price img {
-    display: inline-block; vertical-align: middle;
+    display: inline-block; 
+    vertical-align: middle;
+}
+.menu-price .price {
+    color: #FF8906;
 }
 .section3-tagline-div {
     text-align: center;
