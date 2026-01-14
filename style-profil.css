@@ -126,6 +126,20 @@ header {
     width: 18px;
     transform: translateY(-50%);
 }
+.eye-slash {
+    position: absolute;
+    top: 30%;
+    right: 45px;
+}
+.input-pw {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+.input-pw p {
+    color: #FF8906;
+    font-size: 12px;
+}
 .right button {
     background-color: #FF8906;
     color: black;
