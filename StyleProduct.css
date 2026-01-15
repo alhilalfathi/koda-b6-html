@@ -179,9 +179,6 @@ header {
 .card>.checkout {
     display: inline-block; vertical-align: middle;
 }
-/* .crad>.checkout {
- margin-top: 10px;
-} */
 .next img {
     margin-left: 600px;
     margin-top: 45px;
