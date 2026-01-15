@@ -32,7 +32,7 @@
     </header>
     <section>
         <div class="section2">
-            <div class="left">
+            <!-- <div class="left">
                 <div class="left-top">
                     <img src="assets/index/image31.png" alt="31">
                 </div>
@@ -77,7 +77,7 @@
                         <a href="#">add to cart</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <section>
@@ -166,5 +166,184 @@
             <img src="assets/index/Frame42.png" alt="42">
         </div>
     </footer>
+    <script>
+
+        const data = [
+            {
+                  
+                id: 1,
+                img : "/assets/index/image27.png",
+                name : "Hazelnut Latte",
+                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+                price : 20000,
+                discountPrice: 10000,
+                // bigImage: "/assets/index/image27.png",
+                imgUrl1 : "/assets/index/image22.png",
+                imgUrl2 : "/assets/index/image30.png",
+                imgUrl3 : "/assets/index/image31.png",
+                flashSale: true,
+            },
+            {
+                id: 2,
+                img : "/assets/index/image22.png",
+                name : "Cappucino",
+                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+                price : 20000,
+                discountPrice: 15000,
+                // bigImage: "/assets/index/image22.png",
+                imgUrl1 : "/assets/index/image27.png",
+                imgUrl2 : "/assets/index/image31.png",
+                imgUrl3 : "/assets/index/image30.png",
+                flashSale: true,
+            },
+            {
+                id: 3,
+                img : "/assets/index/image30.png",
+                name : "Matcha Latte",
+                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+                price : 25000,
+                discountPrice: 20000,
+                // bigImage: "/assets/index/image30.png",
+                imgUrl1 : "/assets/index/image27.png",
+                imgUrl2 : "/assets/index/image31.png",
+                imgUrl3 : "/assets/index/image22.png",
+                flashSale: true,
+            },
+            {
+                id: 4,
+                img : "/assets/index/image31.png",
+                name : "Caramel Machiato",
+                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+                price : 20000,
+                discountPrice: 10000,
+                // bigImage: "/assets/index/image31.png",
+                imgUrl1 : "/assets/index/image30.png",
+                imgUrl2 : "/assets/index/image22.png",
+                imgUrl3 : "/assets/index/image27.png",
+                flashSale: true,
+            }
+            
+        ]
+        
+        const queryString = new URLSearchParams(window.location.search)
+        const queryId = queryString.get('id')
+        console.log(queryId)
+
+        data.forEach(product =>{
+            if (product.id == queryId){
+                const mainParent = document.querySelector(".section2")
+        const imgParent = document.createElement("div")
+        imgParent.setAttribute("class","left")
+        const imgParentChild = document.createElement("div")
+        imgParentChild.setAttribute("class","left-top")
+        const imgMain = document.createElement("img")
+        imgMain.setAttribute("src",product.img)
+        imgMain.setAttribute("alt","31")
+        imgParentChild.append(imgMain)
+
+        const imgParentChild2 = document.createElement("div")
+        imgParentChild2.setAttribute("class","left-bot")
+        const img1 = document.createElement("img")
+        img1.setAttribute("src",product.imgUrl1)
+        img1.setAttribute("alt","32")
+        const img2 = document.createElement("img")
+        img2.setAttribute("src",product.imgUrl2)
+        img2.setAttribute("alt","33")
+        const img3 = document.createElement("img")
+        img3.setAttribute("src",product.imgUrl3)
+        img3.setAttribute("alt","34")
+        imgParentChild2.append(img1,img2,img3)
+
+        const imgParent2 = document.createElement("div")
+        imgParent2.setAttribute("class","right")
+        const badge = document.createElement("span")
+        badge.setAttribute("class","badge")
+        badge.textContent = "Flash Sale"
+        const title = document.createElement("h1")
+        title.textContent = product.name
+        const priceParent = document.createElement("div")
+        priceParent.setAttribute("class","product-price")
+        const price = document.createElement("span")
+        const delPrice = document.createElement("del")
+        delPrice.textContent = `IDR${product.price.toLocaleString("id")}`
+        price.append(delPrice)
+        const discountPrice = document.createElement("span")
+        discountPrice.textContent = `IDR${product.discountPrice.toLocaleString("id")}`
+        priceParent.append(price,discountPrice)
+
+        const stars = document.createElement("img")
+        stars.setAttribute("src","/assets/index/Frame-gray.png")
+        stars.setAttribute("alt","41")
+        const reviewParent = document.createElement("div")
+        reviewParent.setAttribute("class","review")
+        const review = document.createElement("span")
+        review.textContent = "200+ Review | Recommendation"
+        const thumbsUp = document.createElement("img")
+        thumbsUp.setAttribute("src","/assets/index/Thumbs.png")
+        thumbsUp.setAttribute("alt","ThumbsUP")
+        reviewParent.append(review,thumbsUp)
+
+        const tagline = document.createElement("p")
+        tagline.textContent = "Cold brewing is a method of brewing that combines ground coffee and cool water and uses time instead of heat to extract the flavor. It is brewed in small batches and steeped for as long as 48 hours."
+        const quantityParent = document.createElement("div")
+        quantityParent.setAttribute("class","quantity")
+        const decrease = document.createElement("button")
+        decrease.textContent = "-"
+        const quantity = document.createElement("span")
+        quantity.textContent = "1"
+        const increase = document.createElement("button")
+        increase.textContent = "+"
+        quantityParent.append(decrease,quantity,increase)
+
+        const size = document.createElement("h3")
+        size.textContent = "Choose Size"
+        const sizeButton = document.createElement("div")
+        sizeButton.setAttribute("class","button")
+        const regularButton = document.createElement("button")
+        regularButton.textContent = "Reguler"
+        const mediumButton = document.createElement("button")
+        mediumButton.textContent = "Medium"
+        const largeButton = document.createElement("button")
+        largeButton.textContent = "Large"
+        sizeButton.append(regularButton,mediumButton,largeButton)
+
+        const varian = document.createElement("h3")
+        varian.textContent = "Hot/Ice?"
+        const varianButton = document.createElement("div")
+        varianButton.setAttribute("class","button")
+        const iceButton = document.createElement("button")
+        iceButton.textContent = "Ice"
+        const hotButton = document.createElement("button")
+        hotButton.textContent = "Hot"
+        varianButton.append(iceButton,hotButton)
+
+        const checkout = document.createElement("div")
+        checkout.setAttribute("class","checkout")
+        const buy = document.createElement("div")
+        buy.setAttribute("class","buy")
+        const buylink = document.createElement("a")
+        buylink.textContent = "Buy"
+        buy.append(buylink)
+        const cart = document.createElement("div")
+        cart.setAttribute("class","cart")
+        const cartImg = document.createElement("img")
+        cartImg.setAttribute("src","/assets/index/ShoppingCart-yellow.png")
+        cartImg.setAttribute("alt","cart")
+        const cartLink = document.createElement("a")
+        cartLink.textContent = "add to cart"
+        cart.append(cartImg,cartLink)
+        checkout.append(buy,cart)
+
+        imgParent2.append(badge,title,priceParent,stars,reviewParent,tagline,quantityParent,sizeButton,varianButton,checkout)
+        imgParent.append(imgParentChild,imgParentChild2)
+        mainParent.append(imgParent,imgParent2)
+            }
+        })
+
+        
+        
+        
+        
+    </script>
 </body>
 </html>
