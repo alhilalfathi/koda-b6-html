@@ -56,6 +56,7 @@ h2 {
 }
 .input-wrapper {
     position: relative;
+    width: 520px;
 }
 .input-icon {
     position: absolute;
@@ -66,25 +67,26 @@ h2 {
 }
 .eye-icon {
     position: absolute;
-    top: 50%;
+    top: 30%;
     right: 14px;
     width: 18px;
-    transform: translateY(-50%);
-    cursor: pointer;
 }
 .input-wrapper input {
     width: 100%;
-    padding: 14px 44px; /* ruang kiri & kanan */
+    padding: 14px 44px; 
     border-radius: 8px;
     border: 1px solid #ddd;
     font-size: 14px;
 }
 .forgot {
-    display: block;
     margin-top: 10px;
     text-align: right;
     color: #ff8906;
     text-decoration: none;
+}
+.forgotpass-wrapper {
+    display: flex;
+    justify-content: right;
 }
 .btn-login {
     width: 100%;
