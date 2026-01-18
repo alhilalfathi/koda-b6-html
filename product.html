@@ -80,7 +80,7 @@
         <div class="filter">
             <h3>Filter</h3>
             <label>Search</label>
-            <input type="text" placeholder="Search Your Product">
+            <input type="text" id="search" placeholder="Search Your Product">
             <div class="category">
                 <label>Category</label>
                 <ul>
@@ -270,47 +270,68 @@
             
         ]
 
-        data.forEach(product=>{
-        
         const container = document.querySelector(".product-list")
-        const card = document.createElement("div")
-        card.setAttribute("class","card")
 
-        const badge = document.createElement("span")
-        badge.setAttribute("class","badge")
-        badge.textContent = "FLASH SALE!"
+        function renderProduct(products){
+            container.innerHTML = ""
 
-        const imageProduct = document.createElement("img")
-        imageProduct.setAttribute("src",product.img)
-        imageProduct.setAttribute("class","product-img")
-        imageProduct.setAttribute("alt","product")
+            products.forEach(product => {
+                const card = document.createElement("div")
+                card.className = "card"
 
-        const productName = document.createElement("h4")
-        productName.textContent = product.name
+                if (product.flashSale) {
+                    const badge = document.createElement("span")
+                    badge.setAttribute("class","badge")
+                    badge.textContent = "FLASH SALE!"
+                    card.appendChild(badge)
+                }
 
-        const tagline = document.createElement("p")
-        tagline.textContent = "You can explore the menu that we provide."
+                const imageProduct = document.createElement("img")
+                imageProduct.setAttribute("src",product.img)
+                imageProduct.setAttribute("class","product-img")
+                imageProduct.setAttribute("alt","product")
 
-        const productPrice = document.createElement("p")
-        productName.setAttribute("class","price")
-        const price = document.createElement("del")
-        price.textContent = `IDR${product.price.toLocaleString("id")}`
-        const discountedPrice = document.createElement("strong")
-        discountedPrice.textContent = `IDR${product.discountPrice.toLocaleString("id")}`
-        productPrice.append(price,discountedPrice)
+                const productName = document.createElement("h4")
+                productName.textContent = product.name
 
-        const buy = document.createElement("a")
-        buy.setAttribute("href","")
-        buy.textContent = "Buy"
+                const tagline = document.createElement("p")
+                tagline.textContent = "You can explore the menu that we provide."
 
-        const checkoutImg = document.createElement("img")
-        checkoutImg.setAttribute("src","/assets/index/Frame37.png")
-        checkoutImg.setAttribute("class","checkout")
-        checkoutImg.setAttribute("alt","checkout")
+                const productPrice = document.createElement("p")
+                productName.setAttribute("class","price")
+                const price = document.createElement("del")
+                price.textContent = `IDR${product.price.toLocaleString("id")}`
+                const discountedPrice = document.createElement("strong")
+                discountedPrice.textContent = `IDR${product.discountPrice.toLocaleString("id")}`
+                productPrice.append(price,discountedPrice)
 
-        card.append(badge,imageProduct,productName,tagline,productPrice,buy,checkoutImg)
-        container.append(card)
+                const buy = document.createElement("a")
+                buy.setAttribute("href","")
+                buy.textContent = "Buy"
 
+                const checkoutImg = document.createElement("img")
+                checkoutImg.setAttribute("src","/assets/index/Frame37.png")
+                checkoutImg.setAttribute("class","checkout")
+                checkoutImg.setAttribute("alt","checkout")
+
+                card.append(imageProduct,productName,tagline,productPrice,buy,checkoutImg)
+                container.append(card)
+            })
+            
+        }
+
+        renderProduct(data)
+
+        const input = document.getElementById("search")
+
+            input.addEventListener("keyup", () => {
+            const keyword = input.value.toLowerCase()
+
+            const filtered = data.filter(item =>
+                item.name.toLowerCase().includes(keyword)
+            )
+
+            renderProduct(filtered)
         })
 
         
