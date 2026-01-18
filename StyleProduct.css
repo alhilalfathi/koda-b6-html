@@ -78,12 +78,19 @@ header {
     padding: 20px;
     margin-left: 5%;
     margin-right: 5%;
+    
 }
 .promo-header {
     width: 95%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+}
+.promo-card-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 20px;
 }
 .btn-testi-wrapper>.btn-testi-kiri {
     width: 50px;
@@ -123,7 +130,8 @@ header {
     background: #8fc28a;
     color: white;
     padding: 15px;
-    width: 280px;
+    width: 310px;
+    font-size: smaller;
     border-radius: 12px;
     margin-right: 15px;
     vertical-align: top;
@@ -133,7 +141,8 @@ header {
     background: #FF8906;
     color: white;
     padding: 15px;
-    width: 280px;
+    width: 310px;
+    font-size: smaller;
     border-radius: 12px;
     margin-right: 15px;
     vertical-align: top;
