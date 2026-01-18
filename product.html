@@ -34,7 +34,13 @@
         <h1>We Provide Good Coffee and Healthy Meals</h1>
     </section>
     <section class="promo">
-        <h2>Today <span>Promo</span></h2>
+        <div class="promo-header">
+            <h2>Today <span>Promo</span></h2>
+            <div class="btn-testi-wrapper">
+                    <div class="btn-testi-kiri">&#8592;</div>
+                    <div class="btn-testi-kanan">&#8594;</div>
+            </div>
+        </div>
 
         <div class="promo-card">
             <img src="assets/index/image46.png">
@@ -100,9 +106,9 @@
             <input type="range" class="price-slider" min="0" max="100" value="70">
             </div>
             <button class="apply">Apply Filter</button>
-    </div>
+        </div>
         <div class="product-list">
-            <div class="card">
+            <!-- <div class="card">
                 <span class="badge">FLASH SALE!</span>
                 <img src="assets/index/image30.png" class="product-img" alt="product">
                 <h4>Hazelnut Latte</h4>
@@ -173,7 +179,7 @@
                 </p>
                 <a href="">Buy</a>
                 <img src="assets/index/Frame37.png" class="checkout" alt="checkout">
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -209,5 +215,105 @@
         </div>
     </footer>
 
+    <script>
+
+        const data = [
+            {
+                  
+                id: 1,
+                img : "/assets/index/image27.png",
+                name : "Hazelnut Latte",
+                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+                price : 20000,
+                discountPrice: 10000,
+                imgUrl1 : "/assets/index/image22.png",
+                imgUrl2 : "/assets/index/image30.png",
+                imgUrl3 : "/assets/index/image31.png",
+                flashSale: true,
+            },
+            {
+                id: 2,
+                img : "/assets/index/image22.png",
+                name : "Cappucino",
+                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+                price : 20000,
+                discountPrice: 15000,
+                imgUrl1 : "/assets/index/image27.png",
+                imgUrl2 : "/assets/index/image31.png",
+                imgUrl3 : "/assets/index/image30.png",
+                flashSale: true,
+            },
+            {
+                id: 3,
+                img : "/assets/index/image30.png",
+                name : "Matcha Latte",
+                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+                price : 25000,
+                discountPrice: 20000,
+                imgUrl1 : "/assets/index/image27.png",
+                imgUrl2 : "/assets/index/image31.png",
+                imgUrl3 : "/assets/index/image22.png",
+                flashSale: true,
+            },
+            {
+                id: 4,
+                img : "/assets/index/image31.png",
+                name : "Caramel Machiato",
+                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+                price : 20000,
+                discountPrice: 10000,
+                imgUrl1 : "/assets/index/image30.png",
+                imgUrl2 : "/assets/index/image22.png",
+                imgUrl3 : "/assets/index/image27.png",
+                flashSale: true,
+            }
+            
+        ]
+
+        data.forEach(product=>{
+        
+        const container = document.querySelector(".product-list")
+        const card = document.createElement("div")
+        card.setAttribute("class","card")
+
+        const badge = document.createElement("span")
+        badge.setAttribute("class","badge")
+        badge.textContent = "FLASH SALE!"
+
+        const imageProduct = document.createElement("img")
+        imageProduct.setAttribute("src",product.img)
+        imageProduct.setAttribute("class","product-img")
+        imageProduct.setAttribute("alt","product")
+
+        const productName = document.createElement("h4")
+        productName.textContent = product.name
+
+        const tagline = document.createElement("p")
+        tagline.textContent = "You can explore the menu that we provide."
+
+        const productPrice = document.createElement("p")
+        productName.setAttribute("class","price")
+        const price = document.createElement("del")
+        price.textContent = `IDR${product.price.toLocaleString("id")}`
+        const discountedPrice = document.createElement("strong")
+        discountedPrice.textContent = `IDR${product.discountPrice.toLocaleString("id")}`
+        productPrice.append(price,discountedPrice)
+
+        const buy = document.createElement("a")
+        buy.setAttribute("href","")
+        buy.textContent = "Buy"
+
+        const checkoutImg = document.createElement("img")
+        checkoutImg.setAttribute("src","/assets/index/Frame37.png")
+        checkoutImg.setAttribute("class","checkout")
+        checkoutImg.setAttribute("alt","checkout")
+
+        card.append(badge,imageProduct,productName,tagline,productPrice,buy,checkoutImg)
+        container.append(card)
+
+        })
+
+        
+    </script>
 </body>
 </html>
