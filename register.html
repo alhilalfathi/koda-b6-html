@@ -24,21 +24,21 @@
                 <p>Fill out the form correctly</p>
                 <div class="input">
                     <label>Full Name</label>
-                    <input type="text" placeholder="Enter Your Full Name">
+                    <input type="text" id="fullname" placeholder="Enter Your Full Name">
                 </div>
                 <div class="input">
                     <label>Email</label>
-                    <input type="email" placeholder="Enter Your Email">
+                    <input type="email" id="email" placeholder="Enter Your Email">
                 </div>
                 <div class="input">
                     <label>Password</label>
-                    <input type="Password" placeholder="Enter Your Password">
+                    <input type="Password" id="password" placeholder="Enter Your Password">
                 </div>
                 <div class="input">
                     <label>Confirm Password</label>
-                    <input type="Password" placeholder="Enter Your Password Again">
+                    <input type="Password" id="confirmPassword" placeholder="Enter Your Password Again">
                 </div>
-                <button class="btn-register">Register</button>
+                <button class="btn-register" id="btnRegister" >Register</button>
                 <div class="login-text">
                     Have An Account? <span>Login</span>
                 </div>
@@ -55,7 +55,40 @@
                 </div>
             </div>
         </div>
-
     </section>
+
+    <script>
+        const fullname = document.getElementById("fullname")
+        const email = document.getElementById("email")
+        const password = document.getElementById("password")
+        const confirmPassword = document.getElementById("confirmPassword")
+        const btnRegister = document.getElementById("btnRegister")
+
+        btnRegister.addEventListener("click", ()=>{
+            if (
+                fullname.value === "" || email.value === "" || password.value === "" || confirmPassword.value === "") {
+                alert("Semua field wajib diisi!")
+                return
+            }
+
+            if (!email.value.includes("@")) {
+                alert("Email tidak valid!")
+                return
+            }
+
+            if (password.value.length < 8) {
+                alert("Password minimal 8 karakter!")
+                return
+            }
+
+            if (password.value !== confirmPassword.value) {
+                alert("Password dan Confirm Password tidak sama!")
+                return
+            }
+
+            alert("Register berhasil")
+        })
+    </script>
+    
 </body>
 </html>
