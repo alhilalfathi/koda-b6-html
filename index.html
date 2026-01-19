@@ -131,18 +131,21 @@
         </div>
     </section>
     <section class="section4">
-        <div class="section4-kiri">
+        <!-- <div class="section4-kiri">
             <img src="assets/index/Rectangle295.png" alt="295">
         </div>
         <div class="section4-kanan">
             <p>TESTIMONIAL</p>
             <h2>Viezh Robert</h2>
-            <p class="manager">Manager Coffe Shop</p>
+            <p class="role">Manager Coffe Shop</p>
             <p>“Wow... I am very happy to spend my whole day here. the Wi-fi is good, and the coffee and meals tho. I like it here!! Very recommended!</p>
             <div><img src="assets/index/Frame41.png" alt="41"></div>
-            <div><img src="assets/index/Group1306.png" alt="1306"></div>
+            <div class="btn-testi-wrapper">
+                <div class="btn-testi-kiri">&#8592;</div>
+                <div class="btn-testi-kanan">&#8594;</div>
+            </div>
             <div><img src="assets/index/Group1300.png" alt="1300"></div>
-        </div>
+        </div> -->
     </section>
     <footer>
         <div class="footer1">
@@ -204,6 +207,31 @@
             },
         ]
 
+        const testiData = [
+            {
+                name : "Viezh Robert",
+                role : "Manager Coffee Shop",
+                msg : `“Wow... I am very happy to spend my whole day here. the Wi-fi is good, and the coffee and meals tho. I like it here!! Very recommended!"`,
+                img : "assets/index/Rectangle295.png"
+
+            },
+            {  
+                name : "Lionel Messi",
+                role : "Customer",
+                msg : `“The place is good, and the coffee is perfect"`,
+                img : "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/rockcms/2025-10/251027-lionel-messi-nightly-02-cs-d18258.jpg"
+
+            },
+            {
+                name : "Jule Prikitiw",
+                role : "Customer",
+                msg : `“I like their Matcha Latte, so delicius"`,
+                img : "https://image.idntimes.com/post/20251016/upload_7f4bed756acf50083759b0b798f32481_be385d31-8100-4b42-90b4-8280895f6b83.jpg"
+
+            }
+        ]
+
+
         data.forEach(product => {
         
         const parentListProduct = document.querySelector(".menu-list-div")
@@ -241,7 +269,80 @@
         parentListProduct.append(listProduct)
         });
         
+        function renderTesti(index) {
+
+            const testiContainer = document.querySelector(".section4")
+            testiContainer.innerHTML = ""
+            const testi = testiData[index]
+
+            const imgWrapper = document.createElement("div")
+            imgWrapper.setAttribute("class","section4-kiri")
+            const testiImg = document.createElement("img")
+            testiImg.setAttribute("src",testi.img)
+            testiImg.setAttribute("alt","testi-image")
+            imgWrapper.append(testiImg)
+
+            const testiMsgWrap = document.createElement("div")
+            testiMsgWrap.setAttribute("class","section4-kanan")
+            
+            const testiTitle = document.createElement("p")
+            testiTitle.textContent = "TESTIMONIAL"
+            
+            const testiName = document.createElement("h2")
+            testiName.textContent = testi.name
         
+            const testiRole = document.createElement("p")
+            testiRole.setAttribute("class","role")
+            testiRole.textContent = testi.role
+            
+            const testiMsg = document.createElement("p")
+            testiMsg.textContent = testi.msg
+            
+            const testiStarsWrap = document.createElement("div")
+            const testiStars = document.createElement("img")
+            testiStars.setAttribute("src","assets/index/Frame41.png")
+            testiStars.setAttribute("alt","testi-stars")
+            testiStarsWrap.append(testiStars)
+
+            const testiBtnWrap = document.createElement("div")
+            testiBtnWrap.setAttribute("class","btn-testi-wrapper")
+            const btnLeft = document.createElement("div")
+            btnLeft.setAttribute("class","btn-testi-kiri")
+            btnLeft.textContent = "<"
+            const btnRight = document.createElement("div")
+            btnRight.setAttribute("class","btn-testi-kanan")
+            btnRight.textContent = ">"
+            testiBtnWrap.append(btnLeft,btnRight)
+
+            const testiStripWrap = document.createElement("div")
+            const testiStrip = document.createElement("img")
+            testiStrip.setAttribute("src","/assets/index/Group1300.png")
+            testiStrip.setAttribute("alt","testi-strip")
+            testiStripWrap.append(testiStrip)
+
+            testiMsgWrap.append(testiTitle,testiName,testiRole,testiMsg,testiStarsWrap,testiBtnWrap,testiStripWrap)
+            testiContainer.append(imgWrapper,testiMsgWrap)
+
+            btnRight.addEventListener("click", () => {
+                currentTesti++
+                if (currentTesti >= testiData.length) {
+                    currentTesti = 0
+                }
+                renderTesti(currentTesti)
+            })
+
+            btnLeft.addEventListener("click", () => {
+                currentTesti--
+                if (currentTesti < 0) {
+                    currentTesti = testiData.length - 1
+                }
+                renderTesti(currentTesti)
+            })
+
+        }
+        currentTesti = 0
+        renderTesti(currentTesti)
+
         
 
     </script>
