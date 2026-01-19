@@ -8,6 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <script 
+        src="https://code.jquery.com/jquery-3.7.1.js"
+		integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+		crossorigin="anonymous">
+    </script>
+
 </head>
 <body>
     <header>
@@ -69,7 +75,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="product">
+                <!-- <div class="product">
                     <img src="assets/index/image31.png" alt="31">
                     <div>
                         <span><img src="assets/index/order.png"> No. Order</span>
@@ -148,7 +154,7 @@
                         <span><img src="assets/index/u_process.png"> Status</span>
                         <p class="on-progress">On Progress</p>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="right">
                 <img src="assets/index/message.png" alt="msg">
@@ -188,5 +194,115 @@
             <img src="assets/index/Frame42.png" alt="42">
         </div>
     </footer>
+
+    <script>
+        
+         $(document).ready(function () {
+
+            const data = [
+                {
+                    img : "assets/index/image31.png",
+                    orderNo : "#12354-09893",
+                    date : "23 January 2023",
+                    total : "Idr 40.000",
+                    status : "On Progress",
+                    
+                },
+                {
+                    img : "assets/index/image22.png",
+                    orderNo : "#12354-09894",
+                    date : "24 January 2023",
+                    total : "Idr 50.000",
+                    status : "On Progress",
+                    
+                },
+                {
+                    img : "assets/index/image30.png",
+                    orderNo : "#12354-09895",
+                    date : "25 January 2023",
+                    total : "Idr 60.000",
+                    status : "On Progress",
+                    
+                },
+                {
+                    img : "assets/index/image34.png",
+                    orderNo : "#12354-09896",
+                    date : "26 January 2023",
+                    total : "Idr 70.000",
+                    status : "On Progress",
+                    
+                }
+            ]
+
+            const container = $(".left")
+
+            data.forEach(order => {
+
+                const product = $("<div>").addClass("product")
+
+                const img = $("<img>").attr("src", order.img).attr("alt", "product")
+
+                const orderDiv = $("<div>")
+                orderDiv.append(
+                    $("<span>").append($("<img>").attr("src", "assets/index/order.png")).append(" No. Order"),
+                    $("<p>").html(`<b>${order.orderNo}</b>`),
+                    $("<a>").attr("href", "#").text("Views Order Detail")
+                )
+
+                const dateDiv = $("<div>")
+                dateDiv.append(
+                    $("<span>").append($("<img>").attr("src", "assets/index/Calendar.png")).append(" Date"),
+                    $("<p>").html(`<b>${order.date}</b>`)
+                )
+
+                const totalDiv = $("<div>")
+                totalDiv.append(
+                    $("<span>").append($("<img>").attr("src", "assets/index/Repeat.png")).append(" Total"),
+                    $("<p>").html(`<b>${order.total}</b>`)
+                )
+
+                const statusDiv = $("<div>")
+                statusDiv.append(
+                    $("<span>").append($("<img>").attr("src", "assets/index/u_process.png")).append(" Status"),
+                    $("<p>").addClass("on-progress").text(order.status)
+                )
+
+                product.append(img, orderDiv, dateDiv, totalDiv, statusDiv)
+                container.append(product)
+            })
+
+        //     data.forEach(order => {
+        //         const product = $(`
+        //             <div class="product">
+        //                 <img src=${order.img} alt="product">
+                        
+        //                 <div>
+        //                     <span><img src="assets/index/order.png"> No. Order</span>
+        //                     <p><b>${order.orderNo}</b></p>
+        //                     <a href="#">Views Order Detail</a>
+        //                 </div>
+
+        //                 <div>
+        //                     <span><img src="assets/index/Calendar.png"> Date</span>
+        //                     <p><b>${order.date}</b></p>
+        //                 </div>
+
+        //                 <div>
+        //                     <span><img src="assets/index/Repeat.png"> Total</span>
+        //                     <p><b>${order.total}</b></p>
+        //                 </div>
+
+        //                 <div>
+        //                     <span><img src="assets/index/u_process.png"> Status</span>
+        //                     <p class="on-progress">${order.status}</p>
+        //                 </div>
+        //             </div>
+        //         `)
+
+        //         container.append(product)
+        //     })
+        })
+
+    </script>
 </body>
 </html>
