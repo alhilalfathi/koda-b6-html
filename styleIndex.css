@@ -242,13 +242,50 @@ header {
     float: right;
     padding-left: 40px;
 }
+.section4-kanan div {
+    margin-top: 20px;
+}
+.section4-kanan>.btn-testi-wrapper {
+    width: 19vh;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-testi-wrapper>.btn-testi-kiri {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+}
+.btn-testi-wrapper>.btn-testi-kanan {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    background-color:#FF8906;
+    color: black;
+}
 .section4-kanan h2 {
-    margin: 10px 0;
+    margin-bottom: 20px;
 }
-.manager {
-    color: #999;
-    font-size: 14px;
+.section4-kanan p {
+    margin-bottom: 20px;
 }
+.section4-kanan>.role {
+    color:#FF8906;
+    font-size: 18px;
+
+}
+
 footer {
     background-color: #f8f8f8;
     padding: 60px 80px;
