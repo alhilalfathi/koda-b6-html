@@ -461,8 +461,9 @@ header {
     width: 269px;
     text-align: center;
 }
-.card>.checkout {
-    display: inline-block; vertical-align: middle;
+.card>.product-checkout {
+    display: inline-block; 
+    vertical-align: middle;
 }
 .next img {
     margin-left: 600px;
