@@ -665,6 +665,94 @@ header {
     vertical-align: middle;
     margin-right: 8px;
 }
+/* profile css */
+.profile-title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 5%;
+}
+.profile-container {
+    display: flex;
+}
+.profile-left {
+    width: 20%;
+    height: 286px;
+    margin-left: 5%;
+    margin-right: 10px;
+    margin-bottom: 5%;
+    border: #E8E8E8 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile-left-down>div a {
+    text-decoration: none;
+    color: black;
+}
+.profile-left-down>div {
+    height: 50px;
+    background-color: #FF8906;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-right {
+    width: 70%;
+    margin-right: 5%;
+    border: #666 1px solid;
+}
+.profile-input-group { 
+    margin-top: 30px;
+    width: 100%;
+}
+.profile-input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    margin-left: 5%;
+}
+.profile-input-group input {
+    width: 90%;
+    padding: 14px 44px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    margin-left: 5%;
+}
+.profile-input-wrapper {
+    position: relative;
+}
+.profile-input-icon {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    width: 18px;
+    transform: translateY(-50%);
+}
+.eye-slash {
+    position: absolute;
+    top: 30%;
+    right: 45px;
+}
+.profile-input-pw {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+.profile-input-pw p {
+    color: #FF8906;
+    font-size: 12px;
+}
+.profile-right button {
+    background-color: #FF8906;
+    color: black;
+    width: 90%;
+    height: 40px;
+    border: none;
+    margin: 5%;
+}
 
 footer {
     background-color: #f8f8f8;
