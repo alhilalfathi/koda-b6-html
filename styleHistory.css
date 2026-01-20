@@ -44,6 +44,10 @@ header {
     color: #fff;
     font-weight: 500;
 }
+.navigasi li a {
+    text-decoration: none;
+    color: white;
+}
 .tombol-signin {
     margin-right: 20px;
     border: 1px solid;
