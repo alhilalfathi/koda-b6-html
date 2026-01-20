@@ -1021,6 +1021,84 @@ header {
 .chat-logo {
     margin-top: 4px;
 }
+/* detail order css */
+.detor-section1 {
+    margin-top: 50px;
+    margin-left: 5%;
+    padding-bottom: 18px;
+}
+.detor-container {
+    display: flex;
+    margin-bottom: 50px;
+}
+.detor-left { 
+    width: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.detor-left h2 {
+    margin-bottom: 20px;
+}
+.detor-left div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: #E8E8E8E8 1px solid;
+    padding: 15px;
+}
+.done {
+    background-color: #00A70033;
+    color: green;
+    width: 60px;
+    height: 30px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.detor-total {
+    color: #FF8906;
+}
+.detor-right {
+    width: 50%;
+    margin-right: 5%;
+}
+.detor-right h2 {
+    margin-bottom: 20px;
+}
+.detor-card {
+    display: flex;
+    margin-bottom: 15px;
+    background-color: #E8E8E84D;
+}
+.detor-card img {
+    width: 180px;
+}
+.detor-card>div {
+    padding: 15px;
+}
+.detor-badge {
+    background: #D00000;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 10px;
+}
+.card-price>h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.card-price>p {
+    margin-bottom: 10px;
+}
+.card-price>div span:first-child {
+    color: red;
+}
+.card-price>div span:last-child {
+    color: #FF8906;
+    font-size: larger;
+    margin-left: 10px;
+}
 
 footer {
     background-color: #f8f8f8;
