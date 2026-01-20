@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout Product</title>
-    <link rel="stylesheet" href="styleCheckoutProd.css">
+    <link rel="stylesheet" href="styleIndex.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <script 
+        src="https://code.jquery.com/jquery-3.7.1.js"
+		integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+		crossorigin="anonymous">
+    </script>
 </head>
 <body>
     <header>
@@ -17,30 +22,30 @@
                     <img src="assets/index/Frame13.png" alt="logo-kopi">
                 </div>
                 <ul>
-                    <li>Home</li>
-                    <li>Product</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
                 </ul>
             </div>
             <div class="navigasi-kanan">
                     <img src="assets/index/Search.png" class="navigasi-kanan-img" alt="logo-search">
                     <img src="assets/index/ShoppingCart.png" class="navigasi-kanan-img" alt="logo-keranjang">
                 
-                <a href="" class="tombol-signin" target="_blank">SignIn</a>
-                <a href="" class="tombol-signup" target="_blank">Sign Up</a>
+                <a href="login.html" class="tombol-signin" target="_blank">SignIn</a>
+                <a href="register.html" class="tombol-signup" target="_blank">Sign Up</a>
             </div>
         </div>
     </header>
     <section>
-        <h1 class="title">Payment Details</h1>
+        <h1 class="checkout-title">Payment Details</h1>
     </section>
     <section>
-        <div class="section2">
-            <div class="order">
-                <div class="order-header">
+        <div class="checkout-section2">
+            <div class="checkout-order">
+                <div class="checkout-order-header">
                     <p>Your Order</p>
                     <p class="add-menu">+ Add Menu</p>
                 </div>
-                <div class="product">
+                <!-- <div class="product">
                     <img src="assets/index/image31.png" alt="31">
                     <div class="product-info">
                         <span class="badge">Flash Sale</span>
@@ -65,27 +70,27 @@
                         </div>
                     </div>
                     <img src="assets/index/XCircle.png" class="del-img" alt="del">
-                </div>
+                </div> -->
             </div>
-            <div class="total">
+            <div class="checkout-total">
                 <div class="total-header">
                     <p>Total</p>
                 </div>
                 <div class="checkout">
-                    <div class="total-order">
+                    <div class="checkout-total-order">
                         <p>Order</p>
                         <p>Idr. 40.000</p>
                     </div>
-                    <div class="total-delivery">
+                    <div class="checkout-total-delivery">
                         <p>Delivery</p>
                         <p>Idr. 0</p>
                     </div>
-                    <div class="total-tax">
+                    <div class="checkout-total-tax">
                         <p>Tax</p>
                         <p>Idr. 4000</p>
                     </div>
                     <hr>
-                    <div class="sub-total">
+                    <div class="checkout-sub-total">
                         <p>Sub Total</p>
                         <p>Idr.44.000</p>
                     </div>
@@ -105,32 +110,32 @@
         </div>
     </section>
     <section>
-        <div class="title"><h2>Payment Info & Delivery</h2></div>
+        <div class="checkout-title"><h2>Payment Info & Delivery</h2></div>
 
-        <div class="input-group">
+        <div class="checkout-input-group">
             <label>Email</label>
-            <div class="input-wrapper">
-                <img src="assets/index/mail.png" alt="email icon" class="input-icon">
+            <div class="checkout-input-wrapper">
+                <img src="assets/index/mail.png" alt="email icon" class="checkout-input-icon">
                 <input type="text" placeholder="Enter Your Email">
             </div>
         </div>
-        <div class="input-group">
+        <div class="checkout-input-group">
             <label>Full Name</label>
-            <div class="input-wrapper">
-                <img src="assets/index/Profile.png" alt="name icon" class="input-icon">
+            <div class="checkout-input-wrapper">
+                <img src="assets/index/Profile.png" alt="name icon" class="checkout-input-icon">
                 <input type="text" placeholder="Enter Your Full Name">
             </div>
         </div>
-        <div class="input-group">
+        <div class="checkout-input-group">
             <label>Address</label>
-            <div class="input-wrapper">
-                <img src="assets/index/Location.png" alt="address icon" class="input-icon">
+            <div class="checkout-input-wrapper">
+                <img src="assets/index/Location.png" alt="address icon" class="checkout-input-icon">
                 <input type="text" placeholder="Enter Your Address">
             </div>
         </div>
-        <div class="input-group">
+        <div class="checkout-input-group">
             <label>Delivery</label>
-            <div class="input-delivery">
+            <div class="checkout-input-delivery">
                 <button>Dine in</button>
                 <button>Door Delivery</button>
                 <button>Pick Up</button>
@@ -164,5 +169,99 @@
             <img src="assets/index/Frame42.png" alt="42">
         </div>
     </footer>
+
+    <script>
+        
+        $(document).ready(function() {
+
+            const data = [
+            {
+                  
+                id: 1,
+                img : "/assets/index/image27.png",
+                name : "Hazelnut Latte",
+                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+                price : 20000,
+                discountPrice: 10000,
+                imgUrl1 : "/assets/index/image22.png",
+                imgUrl2 : "/assets/index/image30.png",
+                imgUrl3 : "/assets/index/image31.png",
+                flashSale: true,
+            },
+            {
+                id: 2,
+                img : "/assets/index/image22.png",
+                name : "Cappucino",
+                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+                price : 20000,
+                discountPrice: 15000,
+                imgUrl1 : "/assets/index/image27.png",
+                imgUrl2 : "/assets/index/image31.png",
+                imgUrl3 : "/assets/index/image30.png",
+                flashSale: true,
+            },
+            {
+                id: 3,
+                img : "/assets/index/image30.png",
+                name : "Matcha Latte",
+                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+                price : 25000,
+                discountPrice: 20000,
+                imgUrl1 : "/assets/index/image27.png",
+                imgUrl2 : "/assets/index/image31.png",
+                imgUrl3 : "/assets/index/image22.png",
+                flashSale: true,
+            },
+            {
+                id: 4,
+                img : "/assets/index/image31.png",
+                name : "Caramel Machiato",
+                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+                price : 20000,
+                discountPrice: 10000,
+                imgUrl1 : "/assets/index/image30.png",
+                imgUrl2 : "/assets/index/image22.png",
+                imgUrl3 : "/assets/index/image27.png",
+                flashSale: true,
+            }
+            
+            ]
+
+            const queryString = new URLSearchParams(window.location.search)
+            const queryId = queryString.get('id')
+
+            const container = $(".order")
+
+            data.forEach(product =>{
+                if (product.id == queryId){
+                    
+                    const card = $("<div>").addClass("product")
+
+                    const img = $("<img>").attr("src", product.img).attr("alt", "product")
+                    
+                    const productDiv = $("<div>").attr("class","product-info")
+                    productDiv.append(
+                        $("<span>").attr("class","badge").text("Flash Sale"),
+                        $("<h3").text(product.name),
+                        $("<p>").text("2pcs   |   Regular   |   Ice   |   Dine In"),
+                        $("<div>").attr("class","product-price").append(
+                            $("<span>").append($("<del>").text(product.price)),
+                            $("<span>").text(product.discountPrice)
+                        )
+                    )
+                    const delImg = $("<img>").attr("src", "assets/index/XCircle.png").attr("alt", "delete")
+                    
+                    card.append(img,productDiv,delImg)
+                    container.append(card)
+                    
+                }
+            })
+
+
+        })
+            
+
+        
+    </script>
 </body>
 </html>
