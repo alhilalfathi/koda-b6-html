@@ -54,9 +54,9 @@
 
     <script>
     
-        const btnLogin = document.querySelector(".btn-login");
-        const inputEmail = document.getElementById("input-email");
-        const inputPassword = document.getElementById("input-password");
+        const btnLogin = document.querySelector(".btn-login")
+        const inputEmail = document.getElementById("input-email")
+        const inputPassword = document.getElementById("input-password")
         const eyeicon = document.querySelector(".eye-icon")
 
         eyeicon.addEventListener("click",()=>{
@@ -69,16 +69,27 @@
         })
 
         btnLogin.addEventListener("click",()=> {
-            const email = inputEmail.value;
-            const password = inputPassword.value;
+            const email = inputEmail.value
+            const password = inputPassword.value
 
-            if (email === "koda@mail.com" && password === "1234") {
-
-                window.location.href = "index.html";
-            } else {
-                alert("Email atau password salah!");
+            if (email === "" || password === "") {
+            alert("Email dan Password wajib diisi!")
+            return
             }
-        });
+
+            const users = JSON.parse(localStorage.getItem("users")) || []
+
+            const user = users.find(user => user.email === email && user.password === password)
+
+            if (!user) {
+                alert("Email atau Password salah!")
+                return
+            }
+
+            localStorage.setItem("userNow", JSON.stringify(user))
+            alert("Login berhasil!")
+            window.location.href = "index.html"
+        })
     
     </script>
 </body>
