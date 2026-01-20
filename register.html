@@ -120,7 +120,25 @@
                 return
             }
 
-            alert("Register berhasil")
+            const users = JSON.parse(localStorage.getItem("users")) || []
+
+            const userMail = users.find(user => user.email === email.value)
+            if (userMail) {
+                alert("Email sudah terdaftar!")
+                return
+            }
+
+            const newUser = {
+                fullname: fullname.value,
+                email: email.value,
+                password: password.value
+            }
+
+            users.push(newUser)
+            localStorage.setItem("users", JSON.stringify(users))
+            alert("Register berhasil!")
+            window.location.href = "login.html"
+
         })
     </script>
     
