@@ -13,30 +13,44 @@
 <body>
     <section>
         <div class="container">
-            <div class="left-div">
+            <div class="left-image">
                 <img src="assets/index/Rectangle289.png" alt="bannerImage">
             </div>
-            <div class="right-div">
+            <div class="right-content">
                 <div class="logo">
                     <img src="assets/index/Frame12.png" alt="logo">
                 </div>
-                <h2>Register</h2>
-                <p>Fill out the form correctly</p>
-                <div class="input">
+                <h2 class="login-title" >Register</h2>
+                <p class="subtitle" >Fill out the form correctly</p>
+                <div class="input-group">
                     <label>Full Name</label>
-                    <input type="text" id="fullname" placeholder="Enter Your Full Name">
+                    <div class="input-wrapper">
+                        <img src="assets/index/Profile.png" alt="fullname icon" class="input-icon">
+                        <input type="text" id="fullname" placeholder="Enter Your Full Name">
+                    </div>
                 </div>
-                <div class="input">
+                <div class="input-group">
                     <label>Email</label>
-                    <input type="email" id="email" placeholder="Enter Your Email">
+                    <div class="input-wrapper">
+                        <img src="assets/index/mail.png" alt="email icon" class="input-icon">
+                        <input type="email" id="email" placeholder="Enter Your Email">
+                    </div>
                 </div>
-                <div class="input">
+                <div class="input-group">
                     <label>Password</label>
-                    <input type="Password" id="password" placeholder="Enter Your Password">
+                    <div class="input-wrapper">
+                        <img src="assets/index/Password.png" alt="password icon" class="input-icon">
+                        <input type="password" id="password" placeholder="Enter Your Password">
+                        <img src="assets/index/EyeSlash.png" alt="eye icon" class="eye-icon">
+                    </div>
                 </div>
-                <div class="input">
+                <div class="input-group">
                     <label>Confirm Password</label>
-                    <input type="Password" id="confirmPassword" placeholder="Enter Your Password Again">
+                    <div class="input-wrapper">
+                        <img src="assets/index/Password.png" alt="password icon" class="input-icon">
+                        <input type="password" id="confirmPassword" placeholder="Enter Your Password Again">
+                        <img src="assets/index/EyeSlash.png" alt="eye icon" class="eye-icon2">
+                    </div>
                 </div>
                 <button class="btn-register" id="btnRegister" >Register</button>
                 <div class="login-text">
@@ -63,6 +77,26 @@
         const password = document.getElementById("password")
         const confirmPassword = document.getElementById("confirmPassword")
         const btnRegister = document.getElementById("btnRegister")
+        const eyeicon = document.querySelector(".eye-icon")
+        const eyeicon2 = document.querySelector(".eye-icon2")
+
+        eyeicon.addEventListener("click",()=>{
+            if (password.type === "password"){
+                password.type = "text"
+            }else {
+                password.type = "password"
+            }
+            
+        })
+         eyeicon2.addEventListener("click",()=>{
+            if (confirmPassword.type === "password"){
+                confirmPassword.type = "text"
+            }else {
+                confirmPassword.type = "password"
+            }
+            
+        })
+        
 
         btnRegister.addEventListener("click", ()=>{
             if (
