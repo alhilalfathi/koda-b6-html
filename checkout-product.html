@@ -227,35 +227,69 @@
             
             ]
 
-            const queryString = new URLSearchParams(window.location.search)
-            const queryId = queryString.get('id')
+            // const queryString = new URLSearchParams(window.location.search)
+            // const queryId = queryString.get('id')
 
-            const container = $(".order")
+            // const container = $(".order")
 
-            data.forEach(product =>{
-                if (product.id == queryId){
+            // data.forEach(product =>{
+            //     if (product.id == queryId){
                     
-                    const card = $("<div>").addClass("product")
+            //         const card = $("<div>").addClass("product")
 
-                    const img = $("<img>").attr("src", product.img).attr("alt", "product")
+            //         const img = $("<img>").attr("src", product.img).attr("alt", "product")
                     
-                    const productDiv = $("<div>").attr("class","product-info")
-                    productDiv.append(
-                        $("<span>").attr("class","badge").text("Flash Sale"),
-                        $("<h3").text(product.name),
-                        $("<p>").text("2pcs   |   Regular   |   Ice   |   Dine In"),
-                        $("<div>").attr("class","product-price").append(
+            //         const productDiv = $("<div>").attr("class","product-info")
+            //         productDiv.append(
+            //             $("<span>").attr("class","badge").text("Flash Sale"),
+            //             $("<h3>").text(product.name),
+            //             $("<p>").text("2pcs   |   Regular   |   Ice   |   Dine In"),
+            //             $("<div>").attr("class","product-price").append(
+            //                 $("<span>").append($("<del>").text(product.price)),
+            //                 $("<span>").text(product.discountPrice)
+            //             )
+            //         )
+            //         const delImg = $("<img>").attr("src", "assets/index/XCircle.png").attr("alt", "delete")
+                    
+            //         card.append(img,productDiv,delImg)
+            //         container.append(card)
+                    
+            //     }
+            // })
+
+            
+
+                const container = $(".checkout-order")
+
+                const queryId = new URLSearchParams(window.location.search).get("id")
+
+                data.forEach(product => {
+                    if (product.id == queryId) {
+
+                        const card = $("<div>").addClass("checkout-product")
+
+                        const img = $("<img>")
+                            .attr("src", product.img)
+                            .attr("alt", product.name)
+
+                        const productDiv = $("<div>").addClass("checkout-product-info").append(
+                            $("<span>").addClass("checkout-badge").text("Flash Sale"),
+                            $("<h3>").text(product.name),
+                            $("<p>").text("2pcs | Regular | Ice | Dine In"),
+                            $("<div>").addClass("checkout-product-price").append(
                             $("<span>").append($("<del>").text(product.price)),
                             $("<span>").text(product.discountPrice)
+                            )
                         )
-                    )
-                    const delImg = $("<img>").attr("src", "assets/index/XCircle.png").attr("alt", "delete")
-                    
-                    card.append(img,productDiv,delImg)
-                    container.append(card)
-                    
-                }
-            })
+
+                        const delImg = $("<img>")
+                            .attr("src", "assets/index/XCircle.png")
+                            .addClass("del-img")
+
+                        card.append(img, productDiv, delImg)
+                        container.append(card)
+                    }
+                })
 
 
         })
