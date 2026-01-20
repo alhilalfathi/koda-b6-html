@@ -322,6 +322,7 @@
         const buy = document.createElement("div")
         buy.setAttribute("class","buy")
         const buylink = document.createElement("a")
+        buylink.setAttribute("href",`/checkout-product.html?id=${product.id}`)
         buylink.textContent = "Buy"
         buy.append(buylink)
         const cart = document.createElement("div")
@@ -330,6 +331,7 @@
         cartImg.setAttribute("src","/assets/index/ShoppingCart-yellow.png")
         cartImg.setAttribute("alt","cart")
         const cartLink = document.createElement("a")
+        cartLink.setAttribute("href",`/detail-order.html?id=${product.id}`)
         cartLink.textContent = "add to cart"
         cart.append(cartImg,cartLink)
         checkout.append(buy,cart)
