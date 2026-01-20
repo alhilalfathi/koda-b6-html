@@ -753,6 +753,121 @@ header {
     border: none;
     margin: 5%;
 }
+/* history css */
+.history-title {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 60px;
+    
+}
+.order-count {
+    padding: 10px;
+    background-color: #E8E8E8;
+    margin-left: 20px;
+}
+.history-container {
+    margin-left: 60px;
+    display: flex;
+}
+.history-left {
+    width: 55%;
+}
+.history-left-top {
+    display: flex;
+}
+.history-progress {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    width: 60%;
+    background-color: #E8E8E899;
+}
+.history-progress div {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.history-progress div:first-child {
+    background-color: white; 
+}
+.calendar {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    width: 60%;
+    background-color: #E8E8E899;
+    justify-content: center;
+}
+.calendar select {
+    border: none;
+}
+.history-product {
+    display: flex;
+    margin-bottom: 16px;
+    background-color: #E8E8E8;
+    margin-right: 20px;
+}
+.history-product>img {
+    width: 100px;
+}
+.history-product>div {
+    padding: 15px;
+}
+.history-product>div a {
+    color: #FF8906;
+}
+.history-product div>.on-progress {
+    color: #FF8906;
+    background-color: #FF890633;
+    width: 100px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+}
+.history-right {
+    width: 30%;
+    height: 30%;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid;
+    border-color: #E8E8E8;
+}
+.history-right h3 {
+    margin-bottom: 16px;
+    margin-top: 12px;
+}
+.history-right p {
+    margin-bottom: 16px;
+}
+.history-right div {
+    height: 50px;
+    background-color: #FF8906;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.history-right div a {
+    text-decoration: none;
+    color: black;
+    
+}
+.history-next {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 footer {
     background-color: #f8f8f8;
