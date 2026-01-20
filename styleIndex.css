@@ -1299,7 +1299,7 @@ header {
 .checkout-order {
     width: 60%;
 }
-.checkout-order>.product {
+.checkout-order>.checkout-product {
     display: flex;
     padding: 20px;
     align-items: center;
