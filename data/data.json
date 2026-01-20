@@ -10,7 +10,7 @@
                 "imgUrl1" : "/assets/index/image22.png",
                 "imgUrl2" : "/assets/index/image30.png",
                 "imgUrl3" : "/assets/index/image31.png",
-                "flashSale": true,
+                "flashSale": true
             },
             {
                 "id": 2,
@@ -22,7 +22,7 @@
                 "imgUrl1" : "/assets/index/image27.png",
                 "imgUrl2" : "/assets/index/image31.png",
                 "imgUrl3" : "/assets/index/image30.png",
-                "flashSale": true,
+                "flashSale": true
             },
             {
                 "id": 3,
@@ -34,7 +34,7 @@
                 "imgUrl1" : "/assets/index/image27.png",
                 "imgUrl2" : "/assets/index/image31.png",
                 "imgUrl3" : "/assets/index/image22.png",
-                "flashSale": true,
+                "flashSale": true
             },
             {
                 "id": 4,
@@ -46,7 +46,7 @@
                 "imgUrl1" : "/assets/index/image30.png",
                 "imgUrl2" : "/assets/index/image22.png",
                 "imgUrl3" : "/assets/index/image27.png",
-                "flashSale": true,
+                "flashSale": true
             }
             
         ]
