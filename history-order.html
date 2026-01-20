@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>History Order</title>
-    <link rel="stylesheet" href="styleHistory.css">
+    <link rel="stylesheet" href="styleIndex.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
@@ -37,16 +37,16 @@
         </div>
     </header>
     <section>
-        <div class="header-title">
+        <div class="history-title">
             <h1>History Order</h1>
             <div class="order-count">
                 <p>2</p>
             </div>
         </div>
-        <div class="container">
-            <div class="left">
-                <div class="left-top">
-                    <div class="progress">
+        <div class="history-container">
+            <div class="history-left">
+                <div class="history-left-top">
+                    <div class="history-progress">
                         <div>
                             <p>On Progress</p>
                         </div>
@@ -156,7 +156,7 @@
                     </div>
                 </div> -->
             </div>
-            <div class="right">
+            <div class="history-right">
                 <img src="assets/index/message.png" alt="msg">
                 <h3>Send Us Message</h3>
                 <p>if your unable to find answer or find your product quickly, please describe your problem and tell us. we will give you solution.</p>
@@ -165,7 +165,7 @@
         </div>
     </section>
     <section>
-        <div class="next"><img src="assets/index/Frame625526.png" alt="next"></div>
+        <div class="history-next"><img src="assets/index/Frame625526.png" alt="next"></div>
     </section>
     <footer>
         <div class="footer1">
@@ -234,11 +234,11 @@
                 }
             ]
 
-            const container = $(".left")
+            const container = $(".history-left")
 
             data.forEach(order => {
 
-                const product = $("<div>").addClass("product")
+                const product = $("<div>").addClass("history-product")
 
                 const img = $("<img>").attr("src", order.img).attr("alt", "product")
 
