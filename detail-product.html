@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Product</title>
-    <link rel="stylesheet" href="style-detail-product.css">
+    <link rel="stylesheet" href="styleIndex.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
@@ -17,21 +17,21 @@
                     <img src="assets/index/Frame13.png" alt="logo-kopi">
                 </div>
                 <ul>
-                    <li>Home</li>
-                    <li>Product</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
                 </ul>
             </div>
             <div class="navigasi-kanan">
                     <img src="assets/index/Search.png" class="navigasi-kanan-img" alt="logo-search">
                     <img src="assets/index/ShoppingCart.png" class="navigasi-kanan-img" alt="logo-keranjang">
                 
-                <a href="" class="tombol-signin" target="_blank">SignIn</a>
-                <a href="" class="tombol-signup" target="_blank">Sign Up</a>
+                <a href="login.html" class="tombol-signin">SignIn</a>
+                <a href="register.html" class="tombol-signup">Sign Up</a>
             </div>
         </div>
     </header>
     <section>
-        <div class="section2">
+        <div class="detpro-section2">
             <!-- <div class="left">
                 <div class="left-top">
                     <img src="assets/index/image31.png" alt="31">
@@ -81,16 +81,16 @@
         </div>
     </section>
     <section>
-        <h1 class="recommendation">Recommendation For You</h1>
-        <div class="product-list">
-            <div class="card">
-                <span class="card-badge">FLASH SALE!</span>
+        <h1 class="detpro-recommendation">Recommendation For You</h1>
+        <div class="detpro-product-list">
+            <div class="detpro-card">
+                <span class="detpro-card-badge">FLASH SALE!</span>
                 <img src="assets/index/image30.png" class="product-img" alt="product">
-                <div class="card-price">
+                <div class="detpro-card-price">
                     <h4>Hazelnut Latte</h4>
                     <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
                     <img src="assets/index/Frame41-gray.png" alt="">
-                    <p class="price">
+                    <p class="detpro-price">
                         <del>IDR 20.000</del>
                         <strong>IDR 10.000</strong>
                     </p>
@@ -100,44 +100,44 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <span class="card-badge">FLASH SALE!</span>
+            <div class="detpro-card">
+                <span class="detpro-card-badge">FLASH SALE!</span>
                 <img src="assets/index/image31.png" class="product-img" alt="product">
-                <div class="card-price">
+                <div class="detpro-card-price">
                     <h4>Hazelnut Latte</h4>
                     <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
                     <img src="assets/index/Frame41-gray.png" alt="">
-                    <p class="price">
+                    <p class="detpro-price">
                         <del>IDR 20.000</del>
                         <strong>IDR 10.000</strong>
                     </p>
                     <div>
                         <a href="">Buy</a>
-                        <img src="assets/index/Frame37.png" class="checkout" alt="checkout">
+                        <img src="assets/index/Frame37.png" class="detpro-checkout" alt="checkout">
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <span class="card-badge">FLASH SALE!</span>
-                <img src="assets/index/image31.png" class="product-img" alt="product">
-                <div class="card-price">
+            <div class="detpro-card">
+                <span class="detpro-card-badge">FLASH SALE!</span>
+                <img src="assets/index/image31.png" class="detpro-product-img" alt="product">
+                <div class="detpro-card-price">
                     <h4>Hazelnut Latte</h4>
                     <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
                     <img src="assets/index/Frame41-gray.png" alt="">
-                    <p class="price">
+                    <p class="detpro-price">
                         <del>IDR 20.000</del>
                         <strong>IDR 10.000</strong>
                     </p>
                     <div>
                         <a href="">Buy</a>
-                        <img src="assets/index/Frame37.png" class="checkout" alt="checkout">
+                        <img src="assets/index/Frame37.png" class="detpro-checkout" alt="checkout">
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section>
-        <div class="next"><img src="assets/index/Frame625526.png" alt="next"></div>
+        <div class="detpro-next"><img src="assets/index/Frame625526.png" alt="next"></div>
     </section>
     <footer>
         <div class="footer1">
@@ -231,18 +231,18 @@
 
         data.forEach(product =>{
             if (product.id == queryId){
-                const mainParent = document.querySelector(".section2")
+                const mainParent = document.querySelector(".detpro-section2")
         const imgParent = document.createElement("div")
-        imgParent.setAttribute("class","left")
+        imgParent.setAttribute("class","detpro-left")
         const imgParentChild = document.createElement("div")
-        imgParentChild.setAttribute("class","left-top")
+        imgParentChild.setAttribute("class","detpro-left-top")
         const imgMain = document.createElement("img")
         imgMain.setAttribute("src",product.img)
         imgMain.setAttribute("alt","31")
         imgParentChild.append(imgMain)
 
         const imgParentChild2 = document.createElement("div")
-        imgParentChild2.setAttribute("class","left-bot")
+        imgParentChild2.setAttribute("class","detpro-left-bot")
         const img1 = document.createElement("img")
         img1.setAttribute("src",product.imgUrl1)
         img1.setAttribute("alt","32")
@@ -255,14 +255,14 @@
         imgParentChild2.append(img1,img2,img3)
 
         const imgParent2 = document.createElement("div")
-        imgParent2.setAttribute("class","right")
+        imgParent2.setAttribute("class","detpro-right")
         const badge = document.createElement("span")
-        badge.setAttribute("class","badge")
+        badge.setAttribute("class","detpro-badge")
         badge.textContent = "Flash Sale"
         const title = document.createElement("h1")
         title.textContent = product.name
         const priceParent = document.createElement("div")
-        priceParent.setAttribute("class","product-price")
+        priceParent.setAttribute("class","detpro-product-price")
         const price = document.createElement("span")
         const delPrice = document.createElement("del")
         delPrice.textContent = `IDR${product.price.toLocaleString("id")}`
@@ -275,7 +275,7 @@
         stars.setAttribute("src","/assets/index/Frame-gray.png")
         stars.setAttribute("alt","41")
         const reviewParent = document.createElement("div")
-        reviewParent.setAttribute("class","review")
+        reviewParent.setAttribute("class","detpro-review")
         const review = document.createElement("span")
         review.textContent = "200+ Review | Recommendation"
         const thumbsUp = document.createElement("img")
@@ -298,7 +298,7 @@
         const size = document.createElement("h3")
         size.textContent = "Choose Size"
         const sizeButton = document.createElement("div")
-        sizeButton.setAttribute("class","button")
+        sizeButton.setAttribute("class","detpro-button")
         const regularButton = document.createElement("button")
         regularButton.textContent = "Reguler"
         const mediumButton = document.createElement("button")
@@ -310,7 +310,7 @@
         const varian = document.createElement("h3")
         varian.textContent = "Hot/Ice?"
         const varianButton = document.createElement("div")
-        varianButton.setAttribute("class","button")
+        varianButton.setAttribute("class","detpro-button")
         const iceButton = document.createElement("button")
         iceButton.textContent = "Ice"
         const hotButton = document.createElement("button")
@@ -318,15 +318,15 @@
         varianButton.append(iceButton,hotButton)
 
         const checkout = document.createElement("div")
-        checkout.setAttribute("class","checkout")
+        checkout.setAttribute("class","detpro-checkout")
         const buy = document.createElement("div")
-        buy.setAttribute("class","buy")
+        buy.setAttribute("class","detpro-buy")
         const buylink = document.createElement("a")
         buylink.setAttribute("href",`/checkout-product.html?id=${product.id}`)
         buylink.textContent = "Buy"
         buy.append(buylink)
         const cart = document.createElement("div")
-        cart.setAttribute("class","cart")
+        cart.setAttribute("class","detpro-cart")
         const cartImg = document.createElement("img")
         cartImg.setAttribute("src","/assets/index/ShoppingCart-yellow.png")
         cartImg.setAttribute("alt","cart")
