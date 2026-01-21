@@ -320,7 +320,7 @@ header {
     margin-bottom: 10px;
 }
 .promo-card-wrapper {
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
     padding: 20px;
@@ -336,6 +336,8 @@ header {
     font-weight: bold;
     background-color: #E8E8E8;
     color: black;
+    cursor: pointer;
+    border: none;
 }
 .btn-testi-wrapper {
     display: flex;
@@ -353,6 +355,8 @@ header {
     font-weight: bold;
     background-color:#FF8906;
     color: black;
+    cursor: pointer;
+    border: none;
 }
 .promo-header h2 span {
     color: #FF8906;
