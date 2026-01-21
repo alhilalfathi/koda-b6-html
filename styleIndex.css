@@ -1339,6 +1339,8 @@ header {
 .checkout-product>.del-img {
     width: 20px;
     height: 20px;
+    margin-left: 8%;
+    cursor: pointer;
 }
 
 .checkout-total {
