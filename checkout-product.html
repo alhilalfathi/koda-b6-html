@@ -174,91 +174,13 @@
         
         $(document).ready(function() {
 
-            const data = [
-            {
-                  
-                id: 1,
-                img : "/assets/index/image27.png",
-                name : "Hazelnut Latte",
-                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
-                price : 20000,
-                discountPrice: 10000,
-                imgUrl1 : "/assets/index/image22.png",
-                imgUrl2 : "/assets/index/image30.png",
-                imgUrl3 : "/assets/index/image31.png",
-                flashSale: true,
-            },
-            {
-                id: 2,
-                img : "/assets/index/image22.png",
-                name : "Cappucino",
-                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
-                price : 20000,
-                discountPrice: 15000,
-                imgUrl1 : "/assets/index/image27.png",
-                imgUrl2 : "/assets/index/image31.png",
-                imgUrl3 : "/assets/index/image30.png",
-                flashSale: true,
-            },
-            {
-                id: 3,
-                img : "/assets/index/image30.png",
-                name : "Matcha Latte",
-                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
-                price : 25000,
-                discountPrice: 20000,
-                imgUrl1 : "/assets/index/image27.png",
-                imgUrl2 : "/assets/index/image31.png",
-                imgUrl3 : "/assets/index/image22.png",
-                flashSale: true,
-            },
-            {
-                id: 4,
-                img : "/assets/index/image31.png",
-                name : "Caramel Machiato",
-                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
-                price : 20000,
-                discountPrice: 10000,
-                imgUrl1 : "/assets/index/image30.png",
-                imgUrl2 : "/assets/index/image22.png",
-                imgUrl3 : "/assets/index/image27.png",
-                flashSale: true,
+            async function getData(){
+                const res = await fetch("https://raw.githubusercontent.com/alhilalfathi/koda-b6-html/refs/heads/main/data/data.json")
+                const data = await res.json()
+                return data
             }
             
-            ]
-
-            // const queryString = new URLSearchParams(window.location.search)
-            // const queryId = queryString.get('id')
-
-            // const container = $(".order")
-
-            // data.forEach(product =>{
-            //     if (product.id == queryId){
-                    
-            //         const card = $("<div>").addClass("product")
-
-            //         const img = $("<img>").attr("src", product.img).attr("alt", "product")
-                    
-            //         const productDiv = $("<div>").attr("class","product-info")
-            //         productDiv.append(
-            //             $("<span>").attr("class","badge").text("Flash Sale"),
-            //             $("<h3>").text(product.name),
-            //             $("<p>").text("2pcs   |   Regular   |   Ice   |   Dine In"),
-            //             $("<div>").attr("class","product-price").append(
-            //                 $("<span>").append($("<del>").text(product.price)),
-            //                 $("<span>").text(product.discountPrice)
-            //             )
-            //         )
-            //         const delImg = $("<img>").attr("src", "assets/index/XCircle.png").attr("alt", "delete")
-                    
-            //         card.append(img,productDiv,delImg)
-            //         container.append(card)
-                    
-            //     }
-            // })
-
-            
-
+            getData().then(data=>{
                 const container = $(".checkout-order")
 
                 const queryId = new URLSearchParams(window.location.search).get("id")
@@ -291,6 +213,8 @@
                     }
                 })
 
+            })
+                
 
         })
             
