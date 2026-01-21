@@ -37,8 +37,8 @@
         <div class="promo-header">
             <h2>Today <span>Promo</span></h2>
             <div class="btn-testi-wrapper">
-                    <div class="btn-testi-kiri">&#8592;</div>
-                    <div class="btn-testi-kanan">&#8594;</div>
+                    <button class="btn-testi-kiri">&#8592;</button>
+                    <button class="btn-testi-kanan">&#8594;</button>
             </div>
         </div>
 
@@ -344,6 +344,18 @@
             renderProduct(filtered)
         })
 
+        const btnRight = document.querySelector(".btn-testi-kanan")
+        const btnLeft = document.querySelector(".btn-testi-kiri")
+        const promoWrapper = document.querySelector(".promo-card-wrapper")
+        const scrollAmount = 150
+         
+        btnRight.addEventListener("click",()=>{
+            promoWrapper.scrollLeft += scrollAmount
+        })
+
+        btnLeft.addEventListener("click",()=>{
+            promoWrapper.scrollLeft -= scrollAmount
+        })
         
     </script>
 </body>
