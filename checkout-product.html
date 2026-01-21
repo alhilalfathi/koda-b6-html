@@ -277,8 +277,8 @@
                             $("<h3>").text(product.name),
                             $("<p>").text("2pcs | Regular | Ice | Dine In"),
                             $("<div>").addClass("checkout-product-price").append(
-                            $("<span>").append($("<del>").text(product.price)),
-                            $("<span>").text(product.discountPrice)
+                            $("<span>").append($("<del>").text(`IDR${product.price.toLocaleString("id")}`)),
+                            $("<span>").text(`IDR${product.discountPrice.toLocaleString("id")}`)
                             )
                         )
 
