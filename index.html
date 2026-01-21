@@ -176,36 +176,11 @@
     </footer>
 
     <script>
-        const data = [
-            {   
-                id: 1,
-                img : "/assets/index/image27.png",
-                name : "Hazelnut Latte",
-                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
-                price : 20000,
-            },
-            {
-                id: 2,
-                img : "/assets/index/image22.png",
-                name : "Cappucino",
-                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
-                price : 20000,
-            },
-            {
-                id: 3,
-                img : "/assets/index/image30.png",
-                name : "Matcha Latte",
-                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
-                price : 20000,
-            },
-            {
-                id: 4,
-                img : "/assets/index/image31.png",
-                name : "Caramel Machiato",
-                tag : "You can explore the menu that we provide with fun and have their own taste and make your day better.",
-                price : 20000,
-            },
-        ]
+        async function getData(){
+            const res = await fetch("https://raw.githubusercontent.com/alhilalfathi/koda-b6-html/refs/heads/main/data/data.json")
+            const data = await res.json()
+            return data
+        }
 
         const testiData = [
             {
@@ -231,43 +206,45 @@
             }
         ]
 
+        getData().then(data => {
 
-        data.forEach(product => {
-        
-        const parentListProduct = document.querySelector(".menu-list-div")
-        // const listProduct = document.querySelector(".menu-list")
-        const listProduct = document.createElement("div")
-        listProduct.setAttribute("class","menu-list")
-        const imgParent = document.createElement("div")
-        imgParent.setAttribute("class","menu-image")
-        const imgProduct = document.createElement("img")
-        imgProduct.setAttribute("src",product.img)
-        imgProduct.setAttribute("alt",product.name)
-        imgParent.append(imgProduct)
-    
-        
-        const productDetailParent = document.createElement("div")
-        productDetailParent.setAttribute("class","menu-price")
-        const productName = document.createElement("h3")
-        productName.textContent= product.name
-        const pd1 = document.createElement("p")
-        pd1.textContent = product.tag
-        const price = document.createElement("h3")
-        price.setAttribute("class","price")
-        price.textContent = `IDR${product.price.toLocaleString("id")}`
-        const anchor = document.createElement("a")
-        anchor.setAttribute("href",`/detail-product.html?id=${product.id}`)
-        anchor.textContent = "Buy"
-        const imgcart = document.createElement("img")
-        imgcart.setAttribute("src","/assets/index/Frame37.png")
-        imgcart.setAttribute("alt","cart")
+            data.forEach(product => {
+            
+                const parentListProduct = document.querySelector(".menu-list-div")
+                // const listProduct = document.querySelector(".menu-list")
+                const listProduct = document.createElement("div")
+                listProduct.setAttribute("class","menu-list")
+                const imgParent = document.createElement("div")
+                imgParent.setAttribute("class","menu-image")
+                const imgProduct = document.createElement("img")
+                imgProduct.setAttribute("src",product.img)
+                imgProduct.setAttribute("alt",product.name)
+                imgParent.append(imgProduct)
+            
+                
+                const productDetailParent = document.createElement("div")
+                productDetailParent.setAttribute("class","menu-price")
+                const productName = document.createElement("h3")
+                productName.textContent= product.name
+                const pd1 = document.createElement("p")
+                pd1.textContent = product.tag
+                const price = document.createElement("h3")
+                price.setAttribute("class","price")
+                price.textContent = `IDR${product.price.toLocaleString("id")}`
+                const anchor = document.createElement("a")
+                anchor.setAttribute("href",`/detail-product.html?id=${product.id}`)
+                anchor.textContent = "Buy"
+                const imgcart = document.createElement("img")
+                imgcart.setAttribute("src","/assets/index/Frame37.png")
+                imgcart.setAttribute("alt","cart")
 
 
-        productDetailParent.append(productName,pd1,price,anchor,imgcart)
+                productDetailParent.append(productName,pd1,price,anchor,imgcart)
 
-        listProduct.append(imgParent,productDetailParent)
-        parentListProduct.append(listProduct)
-        });
+                listProduct.append(imgParent,productDetailParent)
+                parentListProduct.append(listProduct)
+            });
+        })
         
         function renderTesti(index) {
 
