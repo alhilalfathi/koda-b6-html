@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="p-6 w-full flex justify-between items-center gap-2 border-b border-black-50">
+        <img src="assets/index/Frame12.png" alt="logo" class="">
+        <div class="flex items-center gap-6">
+            <img src="assets/index/Search-gray.png" class="w-5 h-5">
+            <img src="assets/index/ShoppingCart-grey.png" class="w-5 h-5">
+            <div>
+                <img src="assets/index/Ellipse185.png" class="w-8 h-8 rounded-full">
+            </div>
+        </div>
+    </header>
+    <section class="flex min-h-screen">
+        <div>
+            <div class="w-64 h-full bg-white border-r">
+
+                <div class="px-4 space-y-2">
+                    <a href="#" class="flex items-center gap-3 p-3 rounded-lg text-gray-600">
+                        <img src="assets/index/u_create-dashboard.png" class="w-5 h-5">
+                        Dashboard
+                    </a>
+
+                    <a href="#" class="flex items-center gap-3 p-3 rounded-lg bg-orange-500 text-white">
+                        <img src="assets/index/u_glass-tea.png" class="w-5 h-5">
+                        Product
+                    </a>
+
+                    <a href="#" class="flex items-center gap-3 p-3 rounded-lg text-gray-600">
+                        <img src="assets/index/Bag.png" class="w-5 h-5">
+                        Order
+                    </a>
+
+                    <a href="#" class="flex items-center gap-3 p-3 rounded-lg text-gray-600">
+                        <img src="assets/index/2-User.png" class="w-5 h-5">
+                        User
+                    </a>
+
+                    <a href="#" class="flex items-center gap-3 p-3 rounded-lg text-gray-600">
+                        <img src="assets/index/Log-Out.png" class="w-5 h-5">
+                        Keluar
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-1 p-6 w-full ">
+
+            <div class="flex justify-between items-center mb-6">
+            <div>
+                <h1 class="text-2xl font-semibold">Product List</h1>
+                <button class="mt-3 bg-orange-500 text-white px-4 py-2 rounded-lg flex items-center gap-2">
+                <img src="assets/index/plus.png" class="md:w-4 w-2 md:h-4 h-2">
+                Add Product
+                </button>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <div class="relative">
+                <input type="text" placeholder="Enter Product Name"
+                    class="border rounded-lg pl-10 pr-4 py-2 w-64 text-sm">
+                </div>
+
+                <button class="bg-orange-500 text-white px-4 py-2 rounded-lg flex items-center gap-2">
+                <img src="assets/index/Filter3.png" class="w-4 h-4">
+                Filter
+                </button>
+            </div>
+            </div>
+
+            
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <table class="w-full text-sm">
+                <thead class="bg-gray-100 text-gray-600">
+                    <tr>
+                        <th class="p-4"><input type="checkbox"></th>
+                        <th class="p-4">Image</th>
+                        <th class="p-4 text-left">Product Name</th>
+                        <th class="p-4">Price</th>
+                        <th class="p-4">Desc</th>
+                        <th class="p-4">Product Size</th>
+                        <th class="p-4">Method</th>
+                        <th class="p-4">Stock</th>
+                        <th class="p-4">Action</th>
+                    </tr>
+                </thead>
+
+                <tbody class="divide-y">
+                    <tr>
+                        <td class="p-4"><input type="checkbox"></td>
+                        <td class="p-4">
+                            <img src="assets/index/image22.png" class="w-12 h-12 rounded object-cover">
+                        </td>
+                        <td class="p-4">Caramel Macchiato</td>
+                        <td class="p-4">IDR 40.000</td>
+                        <td class="p-4 text-gray-500">Coldbrewing is a method of brewing that...</td>
+                        <td class="p-4">R,L,XL,250gr</td>
+                        <td class="p-4">Deliver, Dine In</td>
+                        <td class="p-4">200</td>
+                        <td class="p-4">
+                        <div class="flex gap-2 justify-center">
+                            <button>
+                            <img src="assets/index/Group-1707.png">
+                            </button>
+                            <button>
+                            <img src="assets/index/Group-1706.png">
+                            </button>
+                        </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="flex justify-between items-center p-4 text-sm text-gray-500">
+                <span>Show 5 product of 100 product</span>
+
+                <div class="flex items-center gap-2">
+                <button>Prev</button>
+                <button class="text-orange-500 font-semibold">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>Next</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="w-[420px] bg-white p-8 border-l">
+
+            <h2 class="text-xl font-semibold mb-6">Edit Product</h2>
+            
+            <label class="block text-sm mb-2">Photo Product</label>
+            <div class="w-12 h-12 border rounded-lg flex items-center justify-center mb-3">
+                <img src="https://placehold.co/50x50" class="w-6">
+            </div>
+            <button class="bg-orange-500 text-white px-4 py-2 rounded text-sm mb-6">
+                Upload
+            </button>
+
+            <label class="block text-sm mb-1">Product name</label>
+            <input class="w-full border rounded-lg px-4 py-2 mb-4" placeholder="Enter Product Name">
+
+            <label class="block text-sm mb-1">Price</label>
+            <input class="w-full border rounded-lg px-4 py-2 mb-4" placeholder="Enter Product Price">
+
+        
+            <label class="block text-sm mb-1">Description</label>
+            <textarea class="w-full border rounded-lg px-4 py-2 h-28 mb-4" placeholder="Enter Product Description">
+            </textarea>
+
+            <label class="block text-sm mb-2">Product Size</label>
+            <div class="flex gap-2 mb-4">
+                <button class="border px-4 py-2 rounded">R</button>
+                <button class="border px-4 py-2 rounded">L</button>
+                <button class="border px-4 py-2 rounded">XL</button>
+                <button class="border px-4 py-2 rounded">250 gr</button>
+                <button class="border px-4 py-2 rounded">500 gr</button>
+            </div>
+
+        
+            <label class="block text-sm mb-1">Stock</label>
+            <select class="w-full border rounded-lg px-4 py-2 mb-6">
+                <option>Enter Product Stock</option>
+            </select>
+
+            <button class="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold">
+                Save Product
+            </button>
+
+        </div>
+        
+        
+    </section>
+
+</body>
+</html>
