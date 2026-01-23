@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <header class="p-6 w-full flex justify-between items-center gap-2 border-b border-black-50">
+        <img src="assets/index/Frame12.png" alt="logo" class="">
+        <div class="flex items-center gap-6">
+            <img src="assets/index/Search-gray.png" class="w-5 h-5">
+            <img src="assets/index/ShoppingCart-grey.png" class="w-5 h-5">
+            <div>
+                <img src="assets/index/Ellipse185.png" class="w-8 h-8 rounded-full">
+            </div>
+        </div>
+    </header>
+    <section class="flex min-h-screen">
+
+        <div class="w-64 bg-white border-r">
+
+            <div class="px-4 space-y-2">
+            <a href="#" class="flex items-center gap-3 p-3 rounded-lg text-gray-600">
+                <img src="assets/index/u_create-dashboard.png" class="w-5 h-5">
+                Dashboard
+            </a>
+
+            <a href="#" class="flex items-center gap-3 p-3 rounded-lg bg-orange-500 text-white">
+                <img src="assets/index/u_glass-tea.png" class="w-5 h-5">
+                Product
+            </a>
+
+            <a href="#" class="flex items-center gap-3 p-3 rounded-lg text-gray-600">
+                <img src="assets/index/Bag.png" class="w-5 h-5">
+                Order
+            </a>
+
+            <a href="#" class="flex items-center gap-3 p-3 rounded-lg text-gray-600">
+                <img src="assets/index/2-User.png" class="w-5 h-5">
+                User
+            </a>
+
+            <a href="#" class="flex items-center gap-3 p-3 rounded-lg text-gray-600">
+                <img src="assets/index/Log-Out.png" class="w-5 h-5">
+                Keluar
+            </a>
+            </div>
+        </div>
+
+        <div class="flex-1 p-6 w-full ">
+
+            <div class="flex justify-between items-center mb-6">
+            <div>
+                <h1 class="text-2xl font-semibold">Order List</h1>
+                <button class="mt-3 bg-orange-500 text-white px-4 py-2 rounded-lg flex items-center gap-2">
+                <img src="assets/index/plus.png" class="md:w-4 w-2 md:h-4 h-2">
+                Add Product
+                </button>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <div class=" flex flex-col">
+                    <label for="product-name">Status</label for="">
+                    <select id="order-status" type="text"
+                    class="border rounded-lg pl-4 pr-4 py-2 w-64 text-sm">
+                    <option value="All">All</option>
+                    <option value="done">Done</option>
+                    <option value="pending">Pending</option>
+                    <option value="on-progress">On Progress</option>
+                    <option value="wait">Wait</option>
+                    </select>
+                </div>
+                <div class=" flex flex-col">
+                    <label for="product-name">Search Order</label for="">
+                    <input id="product-name" type="text" placeholder="Enter Order Number"
+                    class="border rounded-lg pl-10 pr-4 py-2 w-64 text-sm">
+                </div>
+
+                <button class="bg-orange-500 text-white mt-6 px-4 py-2 rounded-lg flex items-center gap-2">
+                <img src="assets/index/Filter3.png" class="w-4 h-4">
+                Filter
+                </button>
+            </div>
+            </div>
+
+            
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                <table class="w-full text-sm">
+                    <thead class="bg-gray-100 text-gray-600">
+                        <tr>
+                            <th class="p-4"><input type="checkbox"></th>
+                            <th class="p-4">No Order</th>
+                            <th class="p-4">Date</th>
+                            <th class="p-4">Order</th>
+                            <th class="p-4">Status</th>
+                            <th class="p-4">Total</th>
+                            <th class="p-4">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="divide-y">
+                        <tr>
+                            <td class="p-4"><input type="checkbox"></td>
+                            <td class="p-4">#12354-09893</td>
+                            <td class="p-4">26 January 2023</td>
+                            <td class="p-4">
+                                <ul>
+                                    <li>Hazelnut Latte R 1x</li>
+                                    <li>Caramel Machiato L 1x</li>
+                                </ul>
+
+                            </td>
+                            <td class="p-4">Done</td>
+                            <td class="p-4">IDR 40.000</td>
+                            <td class="p-4">
+                            <div class="flex gap-2 justify-center">
+                                <button>
+                                <img src="https://placehold.co/25x25" alt="Details">
+                                </button>
+                                <button>
+                                <img src="assets/index/Group-1707.png">
+                                </button>
+                                <button>
+                                <img src="assets/index/Group-1706.png">
+                                </button>
+                            </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-4"><input type="checkbox"></td>
+                            <td class="p-4">#12354-09893</td>
+                            <td class="p-4">26 January 2023</td>
+                            <td class="p-4">
+                                <ul>
+                                    <li>Hazelnut Latte R 1x</li>
+                                    <li>Caramel Machiato L 1x</li>
+                                </ul>
+
+                            </td>
+                            <td class="p-4">Pending</td>
+                            <td class="p-4">IDR 40.000</td>
+                            <td class="p-4">
+                            <div class="flex gap-2 justify-center">
+                                <button>
+                                <img src="https://placehold.co/25x25" alt="Details">
+                                </button>
+                                <button>
+                                <img src="assets/index/Group-1707.png">
+                                </button>
+                                <button>
+                                <img src="assets/index/Group-1706.png">
+                                </button>
+                            </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="flex justify-between items-center p-4 text-sm text-gray-500">
+                    <span>Show 5 product of 100 product</span>
+
+                    <div class="flex items-center gap-2">
+                    <button>Prev</button>
+                    <button class="text-orange-500 font-semibold">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>Next</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div class="w-[420px] bg-white p-8 border-l">
+
+            <h2 class="text-xl font-semibold mb-6">Order  #12354-09893</h2>
+            
+            <p>Order Information</p>
+            
+            <div class="flex justify-between py-4">
+                <p>Full Name</p>
+                <h2>Ghaluh Wizard Anggoro</h2>
+            </div>
+            <div class="flex justify-between py-4">
+                <p>Address</p>
+                <h2>Griya bandung indah</h2>
+            </div>
+            <div class="flex justify-between py-4">
+                <p>Phone</p>
+                <h2>082116304338</h2>
+            </div>
+            <div class="flex justify-between py-4">
+                <p>Payment Method</p>
+                <h2>Cash</h2>
+            </div>
+            <div class="flex justify-between py-4">
+                <p>Shipping</p>
+                <h2>Dine In</h2>
+            </div>
+            <div class="flex justify-between py-4">
+                <p>Status</p>
+                <div>
+                    <select name="status" id="status">
+                        <option value="done">Done</option>
+                        <option value="pending">Pending</option>
+                        <option value="on-progress">On Progress</option>
+                        <option value="wait">Wait</option>
+                    </select>
+                </div>
+            </div>
+        
+            <button class="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold">
+                Update
+            </button>
+
+        </div>
+
+</body>
+</html>
