@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <!-- navbar  -->
     <header class="p-6 w-full flex justify-between items-center gap-2 border-b border-black-50">
         <img src="assets/index/Frame12.png" alt="logo coffee shop" class="">
         <div class="flex items-center gap-6">
@@ -17,10 +18,10 @@
             </div>
         </div>
     </header>
-    <section class="flex min-h-screen">
-        <div>
-            <div class="w-64 h-full bg-white border-r">
 
+    <main class="flex min-h-screen">
+        <!-- side bar  -->
+            <div class="w-64 min-h-screen bg-white border-r">
                 <div class="px-4 space-y-2">
                     <a href="#" class="flex items-center gap-3 p-3 rounded-lg text-gray-600">
                         <img src="assets/index/u_create-dashboard.png" alt="dashboard icon" class="w-5 h-5">
@@ -48,9 +49,8 @@
                     </a>
                 </div>
             </div>
-        </div>
 
-        <div class="flex-1 p-6 w-full ">
+        <article class="flex-1 p-6 w-full ">
 
             <div class="flex justify-between items-center mb-6">
             <div>
@@ -135,11 +135,11 @@
                 </div>
             </div>
             </div>
-        </div>
-        <div class="w-[420px] bg-white p-8 border-l">
+        </article>
 
+        <!-- right side bar -->
+        <aside class="w-[420px] bg-white p-8 border-l">
             <h2 class="text-xl font-semibold mb-6">Edit Product</h2>
-            
             <label class="block text-sm mb-2">Photo Product</label>
             <div class="w-12 h-12 border rounded-lg flex items-center justify-center mb-3">
                 <img src="https://placehold.co/50x50" alt="product image" class="w-6">
@@ -177,11 +177,8 @@
             <button class="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold">
                 Save Product
             </button>
-
-        </div>
-        
-        
-    </section>
+        </aside>             
+    </main>
 
 </body>
 </html>
